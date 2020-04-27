@@ -18,5 +18,5 @@ PYTHON_DIR="PyPSI"
 (
     echo "Setting up ${PYTHON_DIR}"
     cd "${SUBMODULES_DIR}/${PYTHON_DIR}"
-    python -m pip install .
+    pip3 install .
 )
