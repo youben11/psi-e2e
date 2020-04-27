@@ -22,8 +22,11 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
+        apt update
+        apt install -y libmpc-dev
         python -m pip install --upgrade pip
         ./scripts/update_submodules.sh
+        pip3 install submodules/PyPSI/
         ./scripts/install.sh
     - name: Test
       run: |
